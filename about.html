@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Double Presence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .archive-tone {
+        background: radial-gradient(circle at top right, #eef2f5, #f4f3ee 40%, #f7f6f2);
+      }
+      .placeholder {
+        background: linear-gradient(135deg, #e6e7e8, #dfe3e6);
+      }
+    </style>
+  </head>
+  <body class="archive-tone font-sans text-[#1A1A1A] antialiased">
+    <header class="fixed top-0 z-50 w-full border-b border-black/10 bg-white/70 backdrop-blur">
+      <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
+        <a href="index.html#hero" class="text-lg font-semibold tracking-wide">Double Presence</a>
+        <a href="index.html" class="text-sm transition hover:opacity-60">返回首页 / Back to Home</a>
+      </nav>
+    </header>
+
+    <main class="mx-auto w-full max-w-7xl px-6 pb-20 pt-28 lg:px-10">
+      <section class="mb-10">
+        <p class="mb-2 text-xs uppercase tracking-[0.3em] text-black/50">About Us</p>
+        <h1 class="text-3xl font-bold sm:text-5xl">
+          关于我们
+          <span class="block text-xl font-medium text-black/60 sm:text-2xl">About Us</span>
+        </h1>
+      </section>
+
+      <section class="grid gap-5 md:grid-cols-2">
+        <article class="rounded-2xl border border-black/10 bg-white/70 p-5">
+          <img data-about-img="A" alt="沈舒羚 Celine Shen" class="placeholder mb-4 h-auto w-full max-w-[160px] rounded-xl border border-black/10 object-contain" />
+          <h2 class="mb-2 text-xl font-semibold">沈舒羚 Celine Shen</h2>
+          <p class="text-sm leading-relaxed text-black/75">
+            个人简介：<br />
+            现就读于中国美术学院创新设计学院；<br />
+            艺术创作者，创作主要涉及扩展现实（XR）与数字艺术；<br />
+            关注体验本身，乐于想象并设计新奇且有趣的东西；<br />
+            重度猫咪爱好者。<br />
+            <br />
+            联系方式：ssl00zz00990000@gmail.com<br />
+            <span class="mt-2 block border-l border-black/20 pl-3 text-xs text-black/60">
+              Profile: Student at the School of Innovation Design, China Academy of Art. Works across XR and digital
+              art, focusing on lived experience and playful speculative design. A dedicated cat lover.
+            </span>
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-black/10 bg-white/70 p-5">
+          <img data-about-img="B" alt="闫舒欣 Susie Yan" class="placeholder mb-4 h-auto w-full max-w-[160px] rounded-xl border border-black/10 object-contain" />
+          <h2 class="mb-2 text-xl font-semibold">闫舒欣 Susie Yan</h2>
+          <p class="text-sm leading-relaxed text-black/75">
+            个人简介：<br />
+            本科艺术与科技专业，艺术创作者。专注于人工智能、沉浸式体验与新媒体艺术。擅长交互设计方向，作品通常结合MR、AI视觉生成、互动叙事与空间装置。<br />
+            FPS游戏爱好者。<br />
+            <span class="mt-2 block border-l border-black/20 pl-3 text-xs text-black/60">
+              Profile: Artist with a background in Art & Technology. Focuses on AI, immersive experiences, and new
+              media art, combining MR, AI visual generation, interactive narrative, and spatial installation. FPS fan.
+            </span>
+          </p>
+        </article>
+      </section>
+
+      <section class="mt-10 text-sm text-black/65">
+        指导老师：俞同舟 Tongzhou Yu
+      </section>
+    </main>
+
+    <footer class="border-t border-black/10 px-6 py-8">
+      <div class="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 text-sm text-black/70 lg:px-10">
+        <p>© 2026 Double Presence - All Rights Reserved</p>
+        <div class="flex items-center gap-4">
+          <a href="mailto:ssl00zz00990000@gmail.com" class="transition hover:opacity-60">✉️ Email</a>
+          <a href="https://github.com/Lin00zz00" target="_blank" rel="noreferrer" class="transition hover:opacity-60">🐙 GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const ABOUT_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/About%20Us/";
+      const aboutMap = {
+        A: "celine.jpg",
+        B: "susie.jpg"
+      };
+      document.querySelectorAll("img[data-about-img]").forEach((img) => {
+        img.src = ABOUT_BASE + encodeURIComponent(aboutMap[img.dataset.aboutImg] || "");
+        img.addEventListener("error", () => {
+          img.removeAttribute("src");
+          img.classList.add("placeholder");
+        });
+      });
+    </script>
+  </body>
+</html>

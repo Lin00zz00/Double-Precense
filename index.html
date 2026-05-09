@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Double Presence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .archive-tone {
+        background: radial-gradient(circle at top right, #eef2f5, #f4f3ee 40%, #f7f6f2);
+      }
+      .placeholder {
+        background: linear-gradient(135deg, #e6e7e8, #dfe3e6);
+      }
+      .fan-card {
+        transition: transform 320ms ease, box-shadow 320ms ease;
+      }
+    </style>
+  </head>
+  <body class="archive-tone font-sans text-[#1A1A1A] antialiased">
+    <header class="fixed top-0 z-50 w-full border-b border-black/10 bg-white/70 backdrop-blur">
+      <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
+        <a href="#hero" class="text-lg font-semibold tracking-wide">Double Presence</a>
+        <ul class="hidden items-center gap-6 text-sm md:flex">
+          <li><a href="#details" class="transition hover:opacity-60">项目内容<br /><span class="text-xs text-black/50">Project Details</span></a></li>
+          <li><a href="#environment" class="transition hover:opacity-60">场景展示<br /><span class="text-xs text-black/50">Environment</span></a></li>
+          <li><a href="#ux" class="transition hover:opacity-60">用户体验<br /><span class="text-xs text-black/50">UX</span></a></li>
+          <li><a href="#exhibition" class="transition hover:opacity-60">展陈<br /><span class="text-xs text-black/50">Exhibition</span></a></li>
+          <li><a href="about.html" class="transition hover:opacity-60">关于我们<br /><span class="text-xs text-black/50">About Us</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="pt-16">
+      <section id="hero" class="mx-auto min-h-[95vh] w-full max-w-7xl px-6 py-16 lg:px-10">
+        <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="space-y-6">
+            <p class="text-xs uppercase tracking-[0.35em] text-black/50">Portfolio Site</p>
+            <h1 class="text-5xl font-bold leading-[0.95] sm:text-7xl lg:text-8xl">
+              Double Presence
+              <span class="mt-2 block text-3xl font-semibold sm:text-5xl">双重在场</span>
+            </h1>
+            <h2 class="text-xl text-black/70 sm:text-2xl">
+              非对称双人MR体验
+              <span class="mt-1 block text-base font-normal text-black/55 sm:text-lg">Asymmetric Two-Person MR Experience</span>
+            </h2>
+            <p class="max-w-3xl text-sm leading-relaxed text-black/75 sm:text-[13px]">
+              本作品以沉浸式戏剧与混合现实（MR）技术为核心，设计构建了一套双重视域的MR体验。系统通过VR与MR模式的动态切换，以及“基于他者的锚定”机制，使参与者在空间翻转、信息错位与非对称叙事中共同推动剧情发展。双方参与者既互为彼此的空间锚点，也成为对方叙事中的一部分。作品以作者个人经历为灵感，探讨AI时代下身份盗用、信息操控与数字替身等社会议题，回应公众对于真实性、隐私与身份边界的焦虑。
+              <span class="mt-3 block border-l border-black/20 pl-3 text-xs text-black/60">
+                This work centers on immersive theater and mixed reality (MR), constructing a dual-perspective MR experience. Through dynamic switching between VR and MR modes and an "other-anchored" mechanism, participants co-advance the plot amid spatial inversion, information misalignment, and asymmetric storytelling. Each participant is both the other's spatial anchor and part of the other's narrative. Inspired by the author's own experience, the project examines identity theft, information manipulation, and digital doubles in the AI era, responding to public anxiety around authenticity, privacy, and identity boundaries.
+              </span>
+            </p>
+            <a
+              href="#details"
+              class="inline-flex rounded-full border border-black px-5 py-2 text-sm font-medium transition hover:bg-black hover:text-white"
+              >查看项目内容 / Explore Details</a
+            >
+          </div>
+
+          <div class="relative h-[450px] sm:h-[550px] flex justify-center items-start mt-10">
+            <!-- 居中容器 -->
+            <div class="relative w-64 sm:w-72">
+              <!-- Card K: 左侧（底层） -->
+              <div class="fan-card absolute origin-bottom transition-all duration-300 ease-out z-0 -rotate-[15deg] -translate-x-12 hover:-rotate-[20deg] hover:-translate-y-4 hover:z-30">
+                <!-- overflow-hidden 是图片圆角生效的关键 -->
+                <div class="rounded-3xl overflow-hidden shadow-[0_8px_25px_rgba(0,0,0,0.2)]">
+                  <img data-id-card="K.png" alt="ID Card K" class="w-64 sm:w-72 block object-cover" />
+                </div>
+              </div>
+              <!-- Card B: 中间 -->
+              <div class="fan-card absolute origin-bottom transition-all duration-300 ease-out z-10 rotate-0 hover:-translate-y-6 hover:z-30">
+                <div class="rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+                  <img data-id-card="B.png" alt="ID Card B" class="w-64 sm:w-72 block object-cover" />
+                </div>
+              </div>
+              <!-- Card A: 右侧（最上层） -->
+              <div class="fan-card absolute origin-bottom transition-all duration-300 ease-out z-20 rotate-[15deg] translate-x-12 hover:rotate-[20deg] hover:-translate-y-4 hover:z-30">
+                <div class="rounded-3xl overflow-hidden shadow-[0_8px_25px_rgba(0,0,0,0.2)]">
+                  <img data-id-card="A.png" alt="ID Card A" class="w-64 sm:w-72 block object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="details" class="mx-auto w-full max-w-7xl px-6 py-24 lg:px-10">
+        <h3 class="mb-10 text-3xl font-semibold">
+          作品内容深度展示
+          <span class="block text-lg font-normal text-black/55">Project Details</span>
+        </h3>
+
+        <article class="mb-16 rounded-2xl border border-black/10 bg-white/55 p-6">
+          <h4 class="mb-4 text-2xl font-semibold">
+            故事概要
+            <span class="block text-base font-normal text-black/55">Story Summary</span>
+          </h4>
+          <p class="mb-6 max-w-5xl leading-relaxed text-black/75">
+            2036年，一起主播坠楼案件引发舆论争议，嫌疑人B被指控利用AI深度伪造技术制造虚假影像。证人A作为技术专家进入“案件时空重建程序”，通过虚拟回溯调查案发现场。然而，系统在重建过程中不断篡改、补全与拼接证据，使两位参与者逐渐陷入对彼此与“真实”的怀疑之中。
+            <span class="mt-3 block border-l border-black/20 pl-3 text-sm text-black/60">
+              In 2036, a streamer’s fatal fall sparks public controversy. Suspect B is accused of fabricating false
+              footage using AI deepfake technology. Witness A, a technical expert, enters a “spatiotemporal case
+              reconstruction program” to investigate through virtual replay. Yet the system keeps altering, completing,
+              and stitching evidence, drawing both participants into growing suspicion of each other and of reality
+              itself.
+            </span>
+          </p>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <img data-story-img="1.png" alt="Story background image 1" class="placeholder aspect-video w-full object-cover" />
+            <img data-story-img="2.png" alt="Story background image 2" class="placeholder aspect-video w-full object-cover" />
+            <img data-story-img="3.png" alt="Story background image 3" class="placeholder aspect-video w-full object-cover" />
+            <img data-story-img="4.png" alt="Story background image 4" class="placeholder aspect-video w-full object-cover" />
+            <img data-story-img="5.png" alt="Story background image 5" class="placeholder aspect-video w-full object-cover" />
+            <img data-story-img="6.png" alt="Story background image 6" class="placeholder aspect-video w-full object-cover" />
+          </div>
+        </article>
+
+        <div id="environment" class="grid gap-8 lg:grid-cols-[220px_1fr]">
+          <aside class="lg:sticky lg:top-24 lg:h-fit">
+            <p class="mb-3 text-xs uppercase tracking-[0.2em] text-black/50">Scrollspy</p>
+            <nav class="space-y-2 text-sm">
+              <a class="spy-link block px-1 py-1 text-black/60 transition hover:text-black" href="#court">场景一 / The Court</a>
+              <a class="spy-link block px-1 py-1 text-black/60 transition hover:text-black" href="#scene2">案发现场 / Crime Scene</a>
+              <a class="spy-link block px-1 py-1 text-black/60 transition hover:text-black" href="#clue1">线索 1 / Clue 1</a>
+              <a class="spy-link block px-1 py-1 text-black/60 transition hover:text-black" href="#clue2">线索 2 / Clue 2</a>
+              <a class="spy-link block px-1 py-1 text-black/60 transition hover:text-black" href="#clue3">线索 3 / Clue 3</a>
+            </nav>
+          </aside>
+
+          <div class="space-y-12">
+            <article id="court" class="rounded-2xl border border-black/10 bg-white/55 p-6">
+              <h4 class="mb-4 text-lg font-normal">场景一：法庭 <span class="text-sm font-normal text-black/55">The Court</span></h4>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <img data-court-img="1.jpg" alt="Court image one" class="placeholder aspect-video w-full rounded-xl border border-black/10 object-cover" />
+                <img data-court-img="2.png" alt="Court image two" class="placeholder aspect-video w-full rounded-xl border border-black/10 object-cover" />
+              </div>
+            </article>
+
+            <article id="scene2" class="rounded-2xl border border-black/10 bg-white/55 p-6">
+              <h4 class="mb-2 text-lg font-normal">场景二：案发现场</h4>
+              <p class="mb-6 text-sm text-black/60">Crime Scene</p>
+
+              <section id="clue1" class="pb-6">
+                <h5 class="mb-4 text-base font-normal">线索 1 <span class="text-sm text-black/55">Clue 1</span></h5>
+                <div class="grid gap-4 md:grid-cols-[1.4fr_1fr]">
+                  <img data-clue1-big="1.png" alt="Clue 1 main image" class="placeholder h-full min-h-[260px] w-full rounded-xl border border-black/10 object-cover" />
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-1">
+                    <img data-clue1-small="2.png" alt="Clue 1 detail image 1" class="placeholder aspect-video w-full rounded-lg border border-black/10 object-cover" />
+                    <img data-clue1-small="3.png" alt="Clue 1 detail image 2" class="placeholder aspect-video w-full rounded-lg border border-black/10 object-cover" />
+                  </div>
+                </div>
+              </section>
+
+              <section id="clue2" class="border-t border-black/10 py-6">
+                <h5 class="mb-4 text-base font-normal">线索 2 <span class="text-sm text-black/55">Clue 2</span></h5>
+                <img data-clue2-big="1.png" alt="Clue 2 main image" class="placeholder mb-4 aspect-[16/7] w-full rounded-xl border border-black/10 object-cover" />
+                <div class="grid gap-4 sm:grid-cols-3">
+                  <img data-clue2-small="2.png" alt="Clue 2 detail image 1" class="placeholder aspect-video w-full rounded-lg border border-black/10 object-cover" />
+                  <img data-clue2-small="3.png" alt="Clue 2 detail image 2" class="placeholder aspect-video w-full rounded-lg border border-black/10 object-cover" />
+                  <img data-clue2-small="4.png" alt="Clue 2 detail image 3" class="placeholder aspect-video w-full rounded-lg border border-black/10 object-cover" />
+                </div>
+              </section>
+
+              <section id="clue3" class="border-t border-black/10 pt-6">
+                <h5 class="mb-4 text-base font-normal">线索 3 <span class="text-sm text-black/55">Clue 3</span></h5>
+                <img data-clue3-big="1.png" alt="Clue 3 main image" class="placeholder mb-4 aspect-[16/7] w-full rounded-xl border border-black/10 object-cover" />
+                <div class="grid gap-4 sm:grid-cols-3">
+                  <img data-clue3-small="2.png" alt="Clue 3 detail image 1" class="placeholder aspect-video w-full rounded-lg border border-black/10 object-cover" />
+                  <img data-clue3-small="3.png" alt="Clue 3 detail image 2" class="placeholder aspect-video w-full rounded-lg border border-black/10 object-cover" />
+                  <img data-clue3-small="4.png" alt="Clue 3 detail image 3" class="placeholder aspect-video w-full rounded-lg border border-black/10 object-cover" />
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ux" class="mx-auto w-full max-w-7xl px-6 py-24 lg:px-10">
+        <h3 class="mb-6 text-3xl font-semibold">用户体验 <span class="text-base font-normal text-black/55">UX / Interaction</span></h3>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <img data-ux-img="1.jpg" alt="User test image 1" class="placeholder aspect-video w-full rounded-xl border border-black/10 object-cover" />
+          <img data-ux-img="2.jpg" alt="User test image 2" class="placeholder aspect-video w-full rounded-xl border border-black/10 object-cover" />
+          <img data-ux-img="3.jpg" alt="User test image 3" class="placeholder aspect-video w-full rounded-xl border border-black/10 object-cover" />
+        </div>
+      </section>
+
+      <section id="exhibition" class="mx-auto w-full max-w-7xl px-6 pb-24 lg:px-10">
+        <h3 class="mb-6 text-3xl font-semibold">展陈 <span class="text-base font-normal text-black/55">Exhibition</span></h3>
+        <img data-exhibit-img="1.png" alt="Exhibition image 1" class="placeholder w-full object-cover" />
+      </section>
+    </main>
+
+    <footer class="border-t border-black/10 px-6 py-8">
+      <div class="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 text-sm text-black/70 lg:px-10">
+        <p>© 2026 Double Presence - All Rights Reserved</p>
+        <div class="flex items-center gap-4">
+          <a href="mailto:ssl00zz00990000@gmail.com" class="transition hover:opacity-60">✉️ Email</a>
+          <a href="https://github.com/Lin00zz00" target="_blank" rel="noreferrer" class="transition hover:opacity-60">🐙 GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <!--
+      图片路径变量（按你提供目录）:
+      IDCards: E:\Projects\GraduationProject\Website\Double-Precense\Pictures\IDCards
+      故事背景: E:\Projects\GraduationProject\Website\Double-Precense\Pictures\故事背景
+      场景一: E:\Projects\GraduationProject\Website\Double-Precense\Pictures\场景1
+      场景二: E:\Projects\GraduationProject\Website\Double-Precense\Pictures\场景2
+      用户体验: E:\Projects\GraduationProject\Website\Double-Precense\Pictures\用户测试
+    -->
+    <script>
+      const ID_CARD_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/IDCards/";
+      const STORY_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/故事背景/";
+      const COURT_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/场景1/";
+      const CLUE_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/场景2/";
+      const UX_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/用户测试/";
+      const EXHIBIT_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/展陈/";
+
+      document.querySelectorAll("img[data-id-card]").forEach((img) => {
+        img.src = ID_CARD_BASE + img.dataset.idCard;
+        img.addEventListener("error", () => {
+          img.removeAttribute("src");
+          img.classList.add("placeholder");
+        });
+      });
+
+      document.querySelectorAll("img[data-story-img]").forEach((img) => {
+        img.src = STORY_BASE + img.dataset.storyImg;
+        img.addEventListener("error", () => {
+          img.removeAttribute("src");
+          img.classList.add("placeholder");
+        });
+      });
+
+      document.querySelectorAll("img[data-court-img]").forEach((img) => {
+        img.src = COURT_BASE + img.dataset.courtImg;
+        img.addEventListener("error", () => {
+          img.removeAttribute("src");
+          img.classList.add("placeholder");
+        });
+      });
+
+      document.querySelector("img[data-clue1-big]").src = CLUE_BASE + "线索1/" + document.querySelector("img[data-clue1-big]").dataset.clue1Big;
+      document.querySelectorAll("img[data-clue1-small]").forEach((img) => {
+        img.src = CLUE_BASE + "线索1/" + img.dataset.clue1Small;
+      });
+      document.querySelector("img[data-clue2-big]").src = CLUE_BASE + "线索2/" + document.querySelector("img[data-clue2-big]").dataset.clue2Big;
+      document.querySelectorAll("img[data-clue2-small]").forEach((img) => {
+        img.src = CLUE_BASE + "线索2/" + img.dataset.clue2Small;
+      });
+      document.querySelector("img[data-clue3-big]").src = CLUE_BASE + "线索3/" + document.querySelector("img[data-clue3-big]").dataset.clue3Big;
+      document.querySelectorAll("img[data-clue3-small]").forEach((img) => {
+        img.src = CLUE_BASE + "线索3/" + img.dataset.clue3Small;
+      });
+
+      document.querySelectorAll("img[data-clue1-big], img[data-clue1-small], img[data-clue2-big], img[data-clue2-small], img[data-clue3-big], img[data-clue3-small]").forEach((img) => {
+        img.addEventListener("error", () => {
+          img.removeAttribute("src");
+          img.classList.add("placeholder");
+        });
+      });
+
+      document.querySelectorAll("img[data-ux-img]").forEach((img) => {
+        img.src = UX_BASE + img.dataset.uxImg;
+        img.addEventListener("error", () => {
+          img.removeAttribute("src");
+          img.classList.add("placeholder");
+        });
+      });
+
+      document.querySelectorAll("img[data-exhibit-img]").forEach((img) => {
+        img.src = EXHIBIT_BASE + img.dataset.exhibitImg;
+        img.addEventListener("error", () => {
+          img.removeAttribute("src");
+          img.classList.add("placeholder");
+        });
+      });
+
+      const spyLinks = document.querySelectorAll(".spy-link");
+      const sections = [...spyLinks].map((link) => document.querySelector(link.getAttribute("href")));
+      const spyObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              spyLinks.forEach((link) => {
+                const active = link.getAttribute("href").slice(1) === entry.target.id;
+                link.classList.toggle("font-semibold", active);
+                link.classList.toggle("text-black", active);
+                link.classList.toggle("text-black/60", !active);
+              });
+            }
+          });
+        },
+        { threshold: 0.45 }
+      );
+      sections.forEach((section) => section && spyObserver.observe(section));
+    </script>
+  </body>
+</html>
