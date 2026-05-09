@@ -212,12 +212,12 @@
       用户体验: E:\Projects\GraduationProject\Website\Double-Precense\Pictures\用户测试
     -->
     <script>
-      const ID_CARD_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/IDCards/";
-      const STORY_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/故事背景/";
-      const COURT_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/场景1/";
-      const CLUE_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/场景2/";
-      const UX_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/用户测试/";
-      const EXHIBIT_BASE = "file:///E:/Projects/GraduationProject/Website/Double-Precense/Pictures/展陈/";
+      const ID_CARD_BASE = "./Pictures/IDCards/";
+      const STORY_BASE = "./Pictures/故事背景/";
+      const COURT_BASE = "./Pictures/场景1/";
+      const CLUE_BASE = "./Pictures/场景2/";
+      const UX_BASE = "./Pictures/用户测试/";
+      const EXHIBIT_BASE = "./Pictures/展陈/";
 
       document.querySelectorAll("img[data-id-card]").forEach((img) => {
         img.src = ID_CARD_BASE + img.dataset.idCard;
